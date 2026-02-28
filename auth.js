@@ -1,4 +1,5 @@
 var passport = require('passport');
+
 var BasicStrategy = require('passport-http').BasicStrategy;
 
 passport.use(new BasicStrategy(
@@ -14,5 +15,6 @@ passport.use(new BasicStrategy(
        }
    }
 ));
+
 
 exports.isAuthenticated = passport.authenticate('basic', { session: false });
